@@ -1,6 +1,6 @@
 :: --------------------
-::
-::
+:: Reconnect the wlan connection
+:: uses config.ini file
 :: --------------------
 @echo off
 setlocal enabledelayedexpansion
@@ -39,7 +39,7 @@ if not defined section (
             ) else echo(!line! | findstr /i "^%item%\=" >NUL && (
                 for /f "tokens=2 delims==" %%x in ("!line!") do (
 					set var=%%x
-					goto reconect
+					goto reconnect
                     exit /b 0
                 )
             )
@@ -50,7 +50,7 @@ if not defined section (
     )
 )
 
-:reconect
+:reconnect
 netsh wlan disconnect
 netsh wlan connect name=%var%
 

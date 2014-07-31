@@ -1,0 +1,8 @@
+I was tired to do manual reconnect to my home wifi network.
+Simple script reset the connection. (Using "netsh" Windows)
+
+:reconnect
+netsh wlan disconnect
+netsh wlan connect name=%var%
+
+%var% gets from config.ini
