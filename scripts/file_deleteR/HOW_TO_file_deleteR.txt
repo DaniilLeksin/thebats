@@ -1,0 +1,15 @@
+Simple script file_deleteR is useful to control directory and to delete files in it.
+===========================================================================================
+e.g. You want to delete files from c:/windows/temp directory with extension *.tmp when their count is more than 100 and check this condition every 10 seconds. 
+
+To do this you need to configure ini file (config.ini) like:
+===========================================================================================
+
+[SCRIPT_CONFIG]
+folder=c:\windows\temp
+extension=tmp
+permanent=100
+interval=10
+ 
+ 
+If you what to control all files in directory you can use "extension=*"
