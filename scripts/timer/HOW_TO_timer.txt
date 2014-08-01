@@ -1,0 +1,5 @@
+timer.bat - is a simple script to measure the time.
+Start script - enables the timer.
+After "anykeypress" the script prints the time from the start.
+
+Output value "cs" = second * 100
